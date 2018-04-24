@@ -1,0 +1,8 @@
+README
+setup.py
+simpletest/__init__.py
+simpletest.egg-info/PKG-INFO
+simpletest.egg-info/SOURCES.txt
+simpletest.egg-info/dependency_links.txt
+simpletest.egg-info/requires.txt
+simpletest.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+README
+setup.py
+lzatest.egg-info/PKG-INFO
+lzatest.egg-info/SOURCES.txt
+lzatest.egg-info/dependency_links.txt
+lzatest.egg-info/requires.txt
+lzatest.egg-info/top_level.txt
+simpletest/__init__.py
