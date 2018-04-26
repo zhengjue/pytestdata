@@ -1,49 +1,25 @@
+{%  load common_tag %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'mystyle.css' %}">
     <title>DJango test</title>
 </head>
 <body>
 <h1>这是模板测试页面</h1>
-这个变量是字符串对象：{{ books_name}}<br>
-    这个变量是函数对象：{{ hello}}<br>
-    这个变量是类方法对象：{{ fruits_say}}<br>
-    这个变量是类对象：{{ fruits}}<br>
-    这个变量是类对象，访问类对象的属性：{{ fruits.name}}<br>
-    这个变量是类对象，访问类对象的方法：{{ fruits.say}}<br>
-    这个变量是列表对象{{ list }}<br>
-    这个变量是列表对象,访问列表的元素{{ list.1 }}<br>
-    这个变量是字典对象{{ dict }}<br>
-    这个变量是字典对象,访问字典的键{{ dict.a }}<br>
-
-<h1>模板过滤函数</h1>
-add {{num1|add:num2}}<br>
-default "none"{{x1|default:"defaultStr"}}<br>
-default " "{{x2|default:"defaultStr"}}<br>
-default_if_none "none"{{x1|default_if_none:"defaultStr"}}<br>
-default_if_none " "{{x2|default_if_none:"defaultStr"}}<br>
- 这是变为小写后的变量：{{ test|lower }}<br>
-    这是先变成小写再将首字母大写后的变量：{{ test|lower|capfirst}}<br>
-    这是两个数字变量相加：{{ num1|add:num2 }}<br>
-    这是列表变量的第一个元素：{{ list|first }}<br>
-    这是列表变量的最后一个元素：{{ list|last }}<br>
-    这是默认的data日期时间格式：{{ now|date }}<br>
-    这是默认的time时间格式：{{ now|time }}<br>
-    这是data过滤器的年月日24小时制时间格式：{{ now|date:'Y/m/d/H:i:s ' }}<br>
-    这是time过滤器的年月日12小时制时间格式：{{ now|time:'h:i:s ' }}<br>
-    这是字符串的join方法：{{ list|join:'xxx' }}<br>
-    这是字符串的长度方法：{{ test|length }}<br>
-    这是列表的长度是否长度为4：{{ list|length_is:4 }}<br>
-    这是字符串只显示4个字符，其余省略(占3位)：{{ test|truncatechars:7 }}<br>
-    这是字符串只显示2个单词，其余省略(不占位)：{{ test|truncatewords:2 }}<br>
-    这是字符串切片：{{ test|slice:'1:4' }}<br>
-    这是列表切片：{{ list|slice:':2' }}<br>
-    这是含html标签的字符串：{{ html }}<br>
-    这是去掉字符串中的html标签：{{ html|striptags }}<br>
-    这是关掉自动转义，使字符串中html标签生效：{{ html|safe }}<br>
-    这是没做处理的小数：{{ float }}<br>
-    这是保留了一位小数：{{ float|floatformat }}<br>
-    这是保留了两位位小数：{{ float|floatformat:'2' }}<br>
+自定义过滤器 {{ text|mycut:"*" }}<br>
+自定义过滤器 {{ text|mylower }}<br>
+自定义过滤器 {{ text1|mylower }}<br>
+自定义简单标签 {% current_now "%Y/%m/%d %H:%M:%S" %}<br>
+自定义简单上下文标签 {% current_now1 %}
+自定包含标签 {% show_list list %}
+自定包含标签上下文 {% show_list1  %}
+分配标签 {% current_now "%Y/%m/%d %H:%M:%S" as now %}
+{{ now }}s
+{{ now }}
+ <script src="{% static 'myjs.js' %}"></script>
+    图片：
+    <img src="{% static 'myimage.jpg' %}" alt=""/>
 </body>
 </html>

@@ -43,6 +43,9 @@ def index(request, **kw):
                             'float':3.1415926,
                            'now':datetime.now(),
                            'html':"<h1>这是一个测试</h1>",
+                           'text':"test test tset",
+                           'text1':123,
+                           'format_time':"%Y/%m/%d %H:%M:%S",
                            })
 
 
