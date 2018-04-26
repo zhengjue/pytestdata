@@ -1,9 +1,10 @@
 {%  load common_tag %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'mystyle.css' %}">
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
     <title>DJango test</title>
 </head>
 <body>
@@ -20,6 +21,7 @@
 {{ now }}
  <script src="{% static 'myjs.js' %}"></script>
     图片：
-    <img src="{% static 'myimage.jpg' %}" alt=""/>
+    <img src="{% static 'img1.png' %}" alt=""/>
+    <img src="{% static 'img2.png' %}" alt=""/>
 </body>
 </html>
