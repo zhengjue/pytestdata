@@ -1,1 +1,1 @@
-alert('django js test');
+alert('hahahaha');
